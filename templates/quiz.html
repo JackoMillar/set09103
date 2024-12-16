@@ -4,7 +4,14 @@
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
   </head>
   <body>
-    <h1>Question {{ number }}:</h1>
+    <div class="toolbar">
+      <ul>
+           <li><a href="{{ url_for('hello') }}">Home</a></li>
+           <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+      </ul>
+     </div>
+
+    <h1 style="padding-left: 100px;">Question {{ number }}:</h1>
     <p> {{ text }} </p>
 
     <ul>

@@ -1,0 +1,42 @@
+p { 
+
+}
+
+body {
+max - width :650 px;
+margin :40 px auto;
+padding :0 10 px;
+}
+
+h1 , h2 , h3 { 
+line - height :5;
+position: center;
+}
+
+.toolbar {
+position: absolute;
+top: 10px;
+left:10px;
+background-color: #f4f4f4;
+border: 1px solid #ccc;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.toolbar ul li a {
+text-decoration: none;
+color: #007BFF;
+font-weight: bold;
+}
+
+.toolbar ul li a:hover {
+text-decoration: underline;
+}
+

@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <title>Quiz_End</title>
 </head>
 <body>
     <div class="toolbar">
@@ -10,7 +11,9 @@
             <li><a href="{{ url_for('quiz') }}">Restart Quiz</a></li>
         </ul>
     </div>
-    <h1 style="padding-left: 100px;">Quiz Completed!</h1>
+    <h1 style="padding-left: 100px;">The Cosmere Quiz</h1>
+    <br>
+    <h2>Quiz Completed!</h2>
     <p style="padding-left: 100px;">
         You got <strong>{{ score }}</strong> questions right!<br>
         You answered <strong>{{ incorrect }}</strong> questions incorrectly.

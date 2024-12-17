@@ -4,20 +4,21 @@
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
   </head>
   <body>
-    <div class="toolbar">
+      <div class="toolbar">
+          <ul>
+              <li><a href="{{ url_for('hello') }}">Home</a></li>
+              <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+          </ul>
+      </div>
+      <h1 style="padding-left: 100px;">The Cosmere Quiz</h1>
+      <br>
+      <h1 style="padding-left: 100px;">Question {{ number }}:</h1>
+      <p> {{ text }} </p>
+
       <ul>
-           <li><a href="{{ url_for('hello') }}">Home</a></li>
-           <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+          {% for answer in answers %}
+          <li><a href="/quiz/?answer={{loop.index}}">{{ answer }}</a></li>
+          {% endfor %}
       </ul>
-     </div>
-
-    <h1 style="padding-left: 100px;">Question {{ number }}:</h1>
-    <p> {{ text }} </p>
-
-    <ul>
-      {% for answer in answers %}
-      <li><a href="/quiz/?answer={{loop.index}}">{{ answer }}</a></li>
-      {% endfor %}
-    </ul>
   </body>
 </html>

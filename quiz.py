@@ -24,13 +24,17 @@ def quiz():
             q = q+1
             session['question'] = q
             if q > len(qa):
-                return render_template('success.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
+                return render_template('success.html')
             else:
                 return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
         else:
             return render_template('wrong.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
     else:
         return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
+
+@app.route("/success/")
+def success():
+    return render_template('success.html')
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0")

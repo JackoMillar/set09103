@@ -1,23 +1,103 @@
 {
- "1": {
-     "text":"What is a name that the character 'Hoid' is known by?",
-     "answer":2,
-     "answers":["Honor", "Wit", "Whimsy", "Kelsier" ]
- },
- "2": {
-     "text":"test1",
-     "answer":3,
-     "answers":["1", "4", "2", "67" ]
- },
- "3": {
-     "text":"test2",
-     "answer":1,
-     "answers":["98", "0", "2", "3" ]
- },
- "4": {
-     "text":"test3",
-     "answer":4,
-     "answers":["helo", "god", "by", "e" ]
- }
+  "1": {
+    "text": "What is the name of the planet where the *Stormlight Archive* takes place?",
+    "answer": 3,
+    "answers": [ "Sel", "Scadrial", "Roshar", "Nalthis" ]
+  },
+  "2": {
+    "text": "Who is the main protagonist of the *Mistborn* trilogy?",
+    "answer": 1,
+    "answers": [ "Vin", "Shallan", "Kaladin", "Dalinar" ]
+  },
+  "3": {
+    "text": "What is the magic system used in *Warbreaker*?",
+    "answer": 2,
+    "answers": [ "Surgebinding", "Breaths", "Allomancy", "Voidbinding" ]
+  },
+  "4": {
+    "text": "What is the name of the metal that allows Mistborn to push on metals?",
+    "answer": 4,
+    "answers": [ "Copper", "Zinc", "Bronze", "Steel" ]
+  },
+  "5": {
+    "text": "Which Shard is associated with hatred and destruction?",
+    "answer": 3,
+    "answers": [ "Honor", "Preservation", "Odium", "Endowment" ]
+  },
+  "6": {
+    "text": "What is the name of Kaladin's spren?",
+    "answer": 2,
+    "answers": [ "Glys", "Sylphrena", "Pattern", "Wyndle" ]
+  },
+  "7": {
+    "text": "Which book introduces the concept of Awakening?",
+    "answer": 1,
+    "answers": [ "*Warbreaker*", "*Elantris*", "*Mistborn: The Final Empire*", "*The Way of Kings*" ]
+  },
+  "8": {
+    "text": "What is the term for those who ingest and burn metals in *Mistborn*?",
+    "answer": 3,
+    "answers": [ "Heralds", "Knights Radiant", "Allomancers", "Feruchemists" ]
+  },
+  "9": {
+    "text": "What is the original Shard of Sazed?",
+    "answer": 4,
+    "answers": [ "Odium", "Ruin", "Preservation", "Harmony" ]
+  },
+  "10": {
+    "text": "What is the name of Shallan's mentor in *The Way of Kings*?",
+    "answer": 2,
+    "answers": [ "Kaladin", "Jasnah", "Adolin", "Dalinar" ]
+  },
+  "11": {
+    "text": "Which planet is home to the magic system of Forgery?",
+    "answer": 1,
+    "answers": [ "Sel", "Roshar", "Scadrial", "Nalthis" ]
+  },
+  "12": {
+    "text": "Who wrote *The Way of Kings* in the lore of Roshar?",
+    "answer": 4,
+    "answers": [ "Kaladin", "Nohadon", "Szeth", "Dalinar" ]
+  },
+  "13": {
+    "text": "What type of spren bonds with Truthwatchers?",
+    "answer": 3,
+    "answers": [ "Ashspren", "Cultivationspren", "Mistspren", "Lightspren" ]
+  },
+  "14": {
+    "text": "What is the name of the metal that stores attributes in Feruchemy?",
+    "answer": 2,
+    "answers": [ "Aluminum", "Nicrosil", "Pewter", "Steel" ]
+  },
+  "15": {
+    "text": "Who is the Vessel of the Shard Endowment?",
+    "answer": 1,
+    "answers": [ "Edgli", "Rayse", "Ati", "Leras" ]
+  },
+  "16": {
+    "text": "What is the name of the group that hunts Surgebinders?",
+    "answer": 4,
+    "answers": [ "The Skybreakers", "The Ghostbloods", "The Stone Shamans", "The Sons of Honor" ]
+  },
+  "17": {
+    "text": "Which metal allows Allomancers to see into the future?",
+    "answer": 3,
+    "answers": [ "Iron", "Atium", "Electrum", "Tin" ]
+  },
+  "18": {
+    "text": "What title is given to the leaders of Elantris?",
+    "answer": 2,
+    "answers": [ "Lord Ruler", "Elantrians", "Dulas", "Rithmatists" ]
+  },
+  "19": {
+    "text": "Who is Szeth's master at the end of *Oathbringer*?",
+    "answer": 4,
+    "answers": [ "Kaladin", "Odium", "Dalinar", "Nin" ]
+  },
+  "20": {
+    "text": "What power does the Shard Preservation represent?",
+    "answer": 1,
+    "answers": [ "Stasis", "Destruction", "Creation", "Transformation" ]
+  }
 }
 

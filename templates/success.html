@@ -7,13 +7,13 @@
     <div class="toolbar">
         <ul>
             <li><a href="{{ url_for('hello') }}">Home</a></li>
-            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+            <li><a href="{{ url_for('quiz') }}">Restart Quiz</a></li>
         </ul>
     </div>
-
-    <h1 style="padding-left: 100px;">The Cosmere Quiz</h1>
-
-    <h2 style="padding-left: 100px;">SUCCESS</h2>
-    <h3>You have answered all of the questions correctly and have shown your skill in Cosmere knowledge, you may return to the homepage.</h3>
+    <h1 style="padding-left: 100px;">Quiz Completed!</h1>
+    <p style="padding-left: 100px;">
+        You got <strong>{{ score }}</strong> questions right!<br>
+        You answered <strong>{{ incorrect }}</strong> questions incorrectly.
+    </p>
 </body>
 </html>

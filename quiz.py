@@ -4,37 +4,48 @@ app.secret_key = 'SUPERSEKRETKEY'
 
 @app.route("/")
 def hello():
+    # Initialize session variables for new quiz
     session['question'] = 1
+    session['correct'] = 0
+    session['incorrect'] = 0
     return render_template('index.html')
 
 @app.route("/quiz/")
 def quiz():
     with open('data/cosmere_questions.json', 'r') as file:
         qa = json.load(file)
+    
     try:
-        if (session['question']):
-           q = int(session['question'])
+        q = int(session['question'])  # Current question number
     except KeyError:
         q = 1
 
-    answer = request.args.get('answer', None)
+    answer = request.args.get('answer', None)  # User-submitted answer
+    
+    # If the user has provided an answer
     if answer is not None:
         correct = qa.get(str(q)).get('answer')
         if str(answer) == str(correct):
-            q = q+1
-            session['question'] = q
-            if q > len(qa):
-                return render_template('success.html')
-            else:
-                return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
+            session['correct'] += 1  # Increment correct count
         else:
-            return render_template('wrong.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
-    else:
-        return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
+            session['incorrect'] += 1  # Increment incorrect count
+
+        q += 1  # Move to next question
+        session['question'] = q
+
+    # Check if the quiz is complete
+    if q > len(qa):
+        score = session['correct']
+        incorrect = session['incorrect']
+        return render_template('success.html', score=score, incorrect=incorrect)
+
+    # Otherwise, continue with the next question
+    return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
 
 @app.route("/success/")
 def success():
     return render_template('success.html')
 
+
 if __name__ == "__main__":
-  app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0")

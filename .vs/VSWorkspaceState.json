@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\static",
+    "\\data",
     "\\templates"
   ],
-  "SelectedNode": "\\templates\\success.html",
+  "SelectedNode": "\\data\\cosmere_questions.json",
   "PreviewInSolutionExplorer": false
 }

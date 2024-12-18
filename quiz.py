@@ -43,7 +43,7 @@ def success():
     return render_template('success.html')
 
 @app.route("/startQuiz/")
-def restart():
+def startQuiz():
     # Reset variables for a new quiz
     session['question'] = 1
     session['correct'] = 0

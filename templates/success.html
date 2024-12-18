@@ -13,10 +13,11 @@
     </div>
     <h1 style="padding-left: 100px;">The Cosmere Quiz</h1>
     <br>
-    <h2>Quiz Completed!</h2>
-    <p style="padding-left: 100px;">
-        You got <strong>{{ score }}</strong> questions right!<br>
-        You answered <strong>{{ incorrect }}</strong> questions incorrectly.
-    </p>
+    <div class="score-container">
+        <h1>Quiz Completed!</h1>
+        <p>You got <strong>{{ score }}</strong> questions right!</p>
+        <p>You answered <strong>{{ incorrect }}</strong> questions incorrectly.</p>
+        <a href="{{ url_for('quiz') }}">Try Again</a>
+    </div>
 </body>
 </html>

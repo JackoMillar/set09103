@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, json
+from flask import Flask, render_template, request, session, redirect, json
 app = Flask(__name__)
 app.secret_key = 'SUPERSEKRETKEY'
 
@@ -48,8 +48,7 @@ def startQuiz():
     session['question'] = 1
     session['correct'] = 0
     session['incorrect'] = 0
-    quiz()
-    return()
+    return redirect('/quiz/')
 
 
 if __name__ == "__main__":

@@ -48,7 +48,7 @@ def startQuiz():
     session['question'] = 1
     session['correct'] = 0
     session['incorrect'] = 0
-    return render_template('quiz.html')
+    quiz()
 
 
 if __name__ == "__main__":

@@ -49,6 +49,7 @@ def startQuiz():
     session['correct'] = 0
     session['incorrect'] = 0
     quiz()
+    return()
 
 
 if __name__ == "__main__":

@@ -4,10 +4,6 @@ app.secret_key = 'SUPERSEKRETKEY'
 
 @app.route("/")
 def hello():
-    # Initialize session variables for new quiz
-    session['question'] = 1
-    session['correct'] = 0
-    session['incorrect'] = 0
     return render_template('index.html')
 
 @app.route("/quiz/")
@@ -20,17 +16,17 @@ def quiz():
     except KeyError:
         q = 1
 
-    answer = request.args.get('answer', None)  # User-submitted answer
+    answer = request.args.get('answer', None)  # User answer
     
     # If the user has provided an answer
     if answer is not None:
         correct = qa.get(str(q)).get('answer')
         if str(answer) == str(correct):
-            session['correct'] += 1  # Increment correct count
+            session['correct'] += 1  # Increase correct count
         else:
-            session['incorrect'] += 1  # Increment incorrect count
+            session['incorrect'] += 1  # Increase incorrect count
 
-        q += 1  # Move to next question
+        q += 1  # Move to the next question
         session['question'] = q
 
     # Check if the quiz is complete
@@ -39,12 +35,20 @@ def quiz():
         incorrect = session['incorrect']
         return render_template('success.html', score=score, incorrect=incorrect)
 
-    # Otherwise, continue with the next question
+    # Continue
     return render_template('quiz.html', text=qa[str(q)]["text"], answers=qa[str(q)]["answers"], number=q)
 
 @app.route("/success/")
 def success():
     return render_template('success.html')
+
+@app.route("/startQuiz/")
+def restart():
+    # Reset variables for a new quiz
+    session['question'] = 1
+    session['correct'] = 0
+    session['incorrect'] = 0
+    return render_template('quiz.html')
 
 
 if __name__ == "__main__":
